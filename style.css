@@ -1,8 +1,8 @@
 /* Main styles */
   body { 
     font-family: 'Roboto', sans-serif;
-    background-color: #f3f4f6;
-    color: #030602;
+    background-color: #a8b0be;
+    color: #edf8f1d6;
   } */
   
   /* Container*/
@@ -15,8 +15,8 @@
   
   /* Header */
   header {
-    background-color: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: rgba(10, 3, 20, 0.674);
+    box-shadow: 0 4px 6px -1px rgba(7, 97, 138, 0.381), 0 2px 4px -1px rgba(174, 170, 170, 0.06);
   }
   
   header .container {
@@ -29,7 +29,7 @@
   header a.logo {
     font-size: 1.875rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #edf2f07d;
     text-decoration: none;
   }
   
@@ -41,12 +41,12 @@
   
   nav a {
     margin-left: 1rem;
-    color: #4b5563;
+    color: #e4dbe7bc;
     text-decoration: none;
   }
   
   nav a:hover {
-    color: #2563eb;
+    color: #eaf7fdf1;
   }
   
   /* Language toggle */
@@ -64,6 +64,7 @@
     width: 100%;
     height: 24rem;
     object-fit: cover;
+    background-color: #050247f1;
   }
   
   #home .overlay {
@@ -108,14 +109,14 @@
     display: inline-block;
     /* margin-top: 1.5rem; */
     padding: 0.75rem 1.5rem;
-    background-color: #2563eb;
-    color: white;
+    background-color: #050247f1;
+    color: rgb(249, 243, 243);
     border-radius: 9999px;
     text-decoration: none; 
   }
   
   .btn:hover {
-    background-color: #1d4ed8;
+    background-color: #1a97ad;
   }
   
   /* section style*/
@@ -133,7 +134,7 @@
   
   /* Services Section */
   #services {
-    background-color: #f3f4f6;
+    background-color: #0c87756a;
   }
   
   .services-grid {
@@ -149,10 +150,10 @@
   }
   
   .service-card {
-    background-color: white;
+    background-color: rgba(1, 2, 32, 0.889);
     padding: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(234, 231, 231, 0.979), 0 2px 4px -1px rgba(240, 234, 238, 0.974);
     text-align: center;
   }
   
@@ -170,7 +171,7 @@
   
   /*Booking section */
   #booking {
-    background-color: white;
+    background-color: rgba(37, 14, 119, 0.432);
   }
   
   .booking-form {
@@ -193,13 +194,14 @@
   .form-control {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid #8c3f9961;
     border-radius: 0.5rem;
   }
   
   /* Destinations section*/
   #destinations {
-    background-color: white;
+    background-color: rgba(37, 140, 121, 0.941), 0 2px 4px -1px rgba(233, 225, 225, 0.466);
+    text-align: center0;
   }
   
   .destinations-grid {
@@ -241,7 +243,7 @@
   
   /* Testimonials section */
   #testimonials {
-    background-color: #f3f4f6;
+    background-color: #5d677c;
   }
   
   .testimonials-grid {
@@ -257,10 +259,10 @@
   }
   
   .testimonial-card {
-    background-color: white;
+    background-color: rgb(84, 88, 110);
     padding: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(224, 202, 202, 0.941), 0 2px 4px -1px rgb(233, 225, 225);
     text-align: center;
   }
   
@@ -285,7 +287,7 @@
   
   /*Contact section */
   #contact {
-    background-color: white;
+    background-color: rgba(85, 97, 135, 0.36);
   }
   
   .contact-form {
@@ -298,6 +300,7 @@
   .map-container {
     display: flex;
     justify-content: center;
+    background-color: rgba(53, 34, 219, 0.504), 0 2px 4px -1px rgba(12, 1, 1, 0.744);
   }
   
   .map-container iframe {
@@ -308,9 +311,9 @@
   
   /* footer */
   footer {
-    background-color: #1f2937;
-    color: white;
-    padding: 2rem 0;
+    background-color:  rgba(10, 3, 20, 0.674);
+    color: rgb(248, 243, 243);
+    padding: 5rem 0;
     text-align: center;
   }
   
@@ -329,3 +332,38 @@
   .social-links a:hover {
     color: white;
   }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(21, 194, 124, 0.363);
+  box-shadow: #e6e0ea;
+  box-shadow: 0 4px 8px rgba(27, 172, 99, 0.67);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .header-logo {
+    height: 60px;
+    width: 60px;
+  }
+}
