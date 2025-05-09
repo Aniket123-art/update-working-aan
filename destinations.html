@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations - Tourism Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .destination-section {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .dropdown-container {
+            margin-bottom: 30px;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .dropdown-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dropdown-btn:after {
+            content: '\25BC';
+            font-size: 12px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 5px 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #e8f5e9;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .location-info {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .place-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .place-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .place-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+            .dropdown-container {
+                display: flex;
+                gap: 20px;
+            }
+            
+            .dropdown {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Popular Destinations</h1>
+        
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button onclick="toggleDropdown('narsinghpurDropdown')" class="dropdown-btn">Top 10 Places in Narsinghpur</button>
+                <div id="narsinghpurDropdown" class="dropdown-content">
+                    <a href="#">
+                        <span class="place-number">1</span>
+                        <img src="nsp.img/n1.jpeg" alt="Gautam Buddha Temple" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Gautam Buddha Temple
+                            <span class="location-info">Location: Gotegaon, Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">2</span>
+                        <img src="nsp.img/n2.jpeg" alt="Barman Ghat" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Barman Ghat
+                            <span class="location-info">Location: Near Narsinghpur City</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">3</span>
+                        <img src="nsp.img/n3.jpeg" alt="Dudhara Falls" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Dudhara Falls
+                            <span class="location-info">Location: 25 km from Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">4</span>
+                        <img src="nsp.img/n4.jpeg" alt="Narmada Riverbank" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Narmada Riverbank
+                            <span class="location-info">Location: Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">5</span>
+                        <img src="nsp.img/n5.jpeg" alt="Chausath Yogini Temple" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Chausath Yogini Temple
+                            <span class="location-info">Location: Gadarwara, Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">6</span>
+                        <img src="nsp.img/n6.jpg" alt="dada maharaj mandir" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            dada maharaj mandir
+                            <span class="location-info">Location: 6 km from Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">7</span>
+                        <img src="nsp.img/n7.jpeg"alt=" Sharda Mata Temple" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">"
+                            Sharda Mata Temple
+                            <span class="location-info">Location: Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">8</span>
+                        <img src="nsp.img/n8.jpeg" alt="Musran park " class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                           Musran park 
+                            <span class="location-info">Location: Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">9</span>
+                        <img src="nsp.img/n9.jpeg" alt="Kareli Fort" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Kareli Fort
+                            <span class="location-info">Location: Kareli, Narsinghpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">10</span>
+                        <img src="nsp.img/n10.jpg" alt=" Narsingh Mandir temple" class="place-image"><button onclick="toggleDropdown('narsinghpurDropdown')">Explore</button>
+                        <div class="place-content">
+                            Narsingh Mandir temple
+                            <span class="location-info">Location: Narsinghpur</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="toggleDropdown('jabalpurDropdown')" class="dropdown-btn">Top 10 Places in Jabalpur</button>
+                <div id="jabalpurDropdown" class="dropdown-content">
+                    <a href="#">
+                        <span class="place-number">1</span>
+                        <img src="jbp.img/n1.jpeg" alt="Dhuandhar Falls" class="place-image">
+                        <div class="place-content">
+                            Dhuandhar Falls
+                            <span class="location-info">Location: Bhedaghat, Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">2</span>
+                        <img src="jbp.img/n2.jpeg" alt="Marble Rocks" class="place-image">
+                        <div class="place-content">
+                            Marble Rocks
+                            <span class="location-info">Location: Bhedaghat, Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">3</span>
+                        <img src="jbp.img/n3.jpeg" alt="Balancing Rocks" class="place-image">
+                        <div class="place-content">
+                            Balancing Rocks
+                            <span class="location-info">Location: 25 km from Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">4</span>
+                        <img src="jbp.img/n4.jpeg" alt="Rani Durgavati Fort" class="place-image">
+                        <div class="place-content">
+                            Rani Durgavati Fort
+                            <span class="location-info">Location: Jabalpur City</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">5</span>
+                        <img src="jbp.img/n5.jpg" alt="  Chausath Yogini Temple " class="place-image">
+                        <div class="place-content">
+                            Chausath Yogini Temple
+                            <span class="location-info">Location: Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">6</span>
+                        <img src="jbp.img/n6.webp" alt=" Kankali Devi Mandir Sihora  Jabalpur " class="place-image">
+                        <div class="place-content">
+                          
+                            Kankali Devi Mandir Sihora  Jabalpur 
+                            <span class="location-info">Location: Bhedaghat, Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">7</span>
+                        <img src="jbp.img/n7.jpeg" alt="Madan Mahal fort" class="place-image">
+                        <div class="place-content">
+                            Madan Mahal fort
+                            <span class="location-info">Location: Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">8</span>
+                        <img src="jbp.img/n8.jpeg" alt="Pisanhari Ki Madiya" class="place-image">
+                        <div class="place-content">
+                            Pisanhari Ki Madiya
+                            <span class="location-info">Location: Jabalpur City</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">9</span>
+                        <img src="jbp.img/n9.jpeg" alt="Gupteshwar Temple" class="place-image">
+                        <div class="place-content">
+                            Gupteshwar Temple
+                            <span class="location-info">Location: Jabalpur</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <span class="place-number">10</span>
+                        <img src="jbp.img/n10.jpeg" alt="Tripuri" class="place-image">
+                        <div class="place-content">
+                            Tripuri
+                            <span class="location-info">Location: 12 km from Jabalpur</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="destination-section">
+            <h2>About Narsinghpur</h2>
+            <p>Narsinghpur is a beautiful district of Madhya Pradesh known for its natural beauty and historical significance. The banks of Narmada River, ancient temples, and natural sites attract tourists here.</p>
+        </div>
+        
+        <div class="destination-section">
+            <h2>About Jabalpur</h2>
+            <p>Jabalpur is a major city in Madhya Pradesh famous for its natural and historical sites. Places like Marble Rocks and Dhuandhar Falls in Bhedaghat are the center of tourist attraction.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

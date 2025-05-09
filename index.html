@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>
+    Jabalpur & Narsinghpur Tourism
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="web.img/AAN[1].png" type="image/x-icon">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Header -->
+   <a href=""></a>
+  <header>
+    <div class="container">
+      Jabalpur & Narsinghpur Tourism
+      </a>
+      <nav>
+        <a href="#destinations">
+          Destinations
+        </a>
+        <a href="#home">
+          Home
+        </a>
+        <a href="#services">
+          Services
+        </a>
+        <a href="#booking">
+          Booking
+        </a>
+        <a href="#testimonials">
+          Testimonials
+        </a>
+        <a href="#contact">
+          Contact
+        </a>
+        <!-- <a href="login.html" class="btn">Login</a> -->
+
+      </nav>
+      <a href="login (1).html" class="">Login</a>
+      <div class="text-content" id="text">
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+
+  <section id="home">
+    <img alt="A beautiful scenic view of mountains and a lake"
+      src="https://storage.googleapis.com/a1aa/image/l1nd-SOII9FOiqtJPj43_bpxN73ZFoVPtvCo8sjl-F0.jpg" />
+
+    <div class="overlay">
+      <h1>
+        Explore the Jabalpur & Narsinghpur Tourism
+      </h1>
+      <p>
+        Discover new places with us
+      </p>
+      <a class="btn" href="destinations.html">
+        Get Started </a>
+    </div>
+  </section>
+  <!-- Destinations Section -->
+  <section id="destinations">
+    <div class="container">
+      <h2>
+        Popular Destinations
+        <br>
+        <a href="destinations.html" class="btn">go now</a>
+
+      </h2>
+      <div class="destinations-grid">
+        <div class="destination-card">
+          <img src="web.img/dada maharaj.jpg" alt="Dada Maharaj Mandir Temple">
+          <div class="destination-overlay">
+            Dada Maharaj Mandir Temple
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="web.img/jhoteswar mandir.jpg" alt="Jhoteswar Temple">
+          <div class="destination-overlay">
+            Jhoteswar Temple
+          </div>
+        </div>
+        <!-- <div class="destination-card">
+          <img src="web.img/narsingh mandir.jpg" alt="Narsigh Mandir Temple">
+          <div class="destination-overlay">
+            Narsigh Mandir Temple
+          </div>
+        </div> -->
+        <!-- <div class="destination-card">
+          <img src="web.img/ram mandir .jpg" alt="Ram Mandir Temple">
+          <div class="destination-overlay">
+            Ram Mandir Temple
+          </div>
+        </div> -->
+        <div class="destination-card">
+          <img src="web.img/ganesh mandir.jpg" alt="Ganesh mandir temple">
+          <div class="destination-overlay">
+            Ganesh mandir temple
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>
+        Our Services
+      </h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-plane-departure"></i>
+          <h3>
+            Flight Booking
+          </h3>
+
+          <a class="btn" href="https://www.in.cheapflights.com/">learn more</a>
+
+          <p>
+            Book flights to your favorite destinations with ease.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-hotel"></i>
+          <h3>
+            Hotel Booking
+          </h3>
+          <a class="btn" href="https://www.tripadvisor.in/">learn more</a>
+          <p>
+            Find and book the best hotels at your destination.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-car"></i>
+          <h3>
+            Car Rentals
+          </h3>
+          <a class="btn" href="https://evsmartcab.com/">learn more</a>
+          <p>
+            Rent cars for your travel needs at affordable prices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Booking Section -->
+  <section id="booking">
+    <div class="container">
+      <h2>
+        Book Your Trip
+      </h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label class="form-label" for="service">
+            Select Service
+          </label>
+          <select class="form-control" id="service">
+            <option>
+              Flight Booking
+            </option>
+            <option>
+              Hotel Booking
+            </option>
+            <option>
+              Car Rentals
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="destination">
+            Destination
+          </label>
+          <input class="form-control" id="destination" placeholder="Enter your destination" type="text" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="date">
+            Date
+          </label>
+          <input class="form-control" id="date" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="name">
+            Your Name
+          </label>
+          <input class="form-control" id="name" placeholder="Enter your name" type="text" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">
+            Your Email
+          </label>
+          <input class="form-control" id="email" placeholder="Enter your email" type="email" />
+        </div>
+        <button class="btn" type="submit">
+          Book Now
+        </button>
+      </form>
+    </div>
+  </section>
+ 
+  <!-- Testimonials Section -->
+
+  <section id="testimonials">
+    <div class="container">
+      <h2>
+        What Our Clients Say
+      </h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img alt="Portrait of a happy client"
+            src="https://storage.googleapis.com/a1aa/image/Kz21upGtU-VLldPOfz2j4xZwC-CtqPtdARiyHuMxRSY.jpg" />
+          <p>
+            "Amazing experience! The best travel agency I've ever used."
+          </p>
+          <h3>
+            John_Doe670@gmail.com
+          </h3>
+        </div>
+        <div class="testimonial-card">
+          <img alt="Portrait of a satisfied client"
+            src="https://storage.googleapis.com/a1aa/image/NgJ_UnMh21pV1QezeClFRHbS8bgxFJWQf5BRF1RJQiY.jpg" />
+          <p>
+            "Highly recommend! They made my trip unforgettable."
+          </p>
+          <h3>
+            Jane_Smith204@gmail.com
+          </h3>
+        </div>
+        <div class="testimonial-card">
+          <img alt="Portrait of a delighted client"
+            src="https://storage.googleapis.com/a1aa/image/vGX8w-u1nrEQD4xwKojhah_Tqz35ohQVSS7xoIYBywA.jpg" />
+          <p>
+            "Excellent service and great attention to detail."
+          </p>
+          <h3>
+            Emily_Johnson202@gmail.com
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>
+        Get in Touch
+      </h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <input class="form-control" placeholder="Your Name" type="text" />
+        </div>
+        <div class="form-group">
+          <input class="form-control" placeholder="Your Email" type="email" />
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message"></textarea>
+        </div>
+        <button class="btn" type="submit">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  <!-- Google Map Embed -->
+  <div>
+    <section class="py-10 bg-white">
+      <h2>Our Locations</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.908321885321!2d79.1855150149818!3d22.31216338531233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982281cbf5cbcb3%3A0x24d2bd41d92ddbd3!2sNarsinghpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1644505625890!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>
+            © 2025 Tourism. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a href="#">
+              <i class="fab fa-facebook-f">
+              </i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter">
+              </i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram">
+              </i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in">
+              </i>
+            </a><!--  -->
+          </div>
+        </div>
+      </footer>
+      
+</body>
+
+</html>

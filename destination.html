@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations - Tourism Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        
+        /* Map Styles */
+        .maps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .map-section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .map-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .map-info {
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        
+        .map-info h3 {
+            color: #4CAF50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .tourist-spots {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .tourist-spots li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tourist-spots li:last-child {
+            border-bottom: none;
+        }
+        
+        .spot-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        
+        @media (min-width: 768px) {
+            .maps-container {
+                flex-direction: row;
+            }
+            
+            .map-section {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Popular Destinations</h1>
+        
+        <!-- Dropdown Lists Section -->
+        <!-- Maps Section -->
+        <h2>Explore on Maps</h2>
+        <div class="maps-container">
+            <!-- Narsinghpur Map -->
+            <div class="map-section">
+                <div class="map-header">Narsinghpur Tourist Map</div>
+                <div id="narsinghpurMap" class="map-container"></div>
+                <div class="map-info">
+                    <h3>Beautiful Places to Visit in Narsinghpur</h3>
+                    <ul class="tourist-spots">
+                        <li><span class="spot-icon">1</span> Gautam Buddha Temple - Religious site with historical significance</li>
+                        <li><span class="spot-icon">2</span> Barman Ghat - Scenic riverbank with religious importance</li>
+                        <li><span class="spot-icon">3</span> Dudhara Falls - Beautiful waterfall surrounded by nature</li>
+                        <li><span class="spot-icon">4</span> Narmada Riverbank - Peaceful spot for relaxation</li>
+                        <li><span class="spot-icon">5</span> Chausath Yogini Temple - Ancient temple with architectural beauty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Jabalpur Map -->
+            <div class="map-section">
+                <div class="map-header">Jabalpur Tourist Map</div>
+                <div id="jabalpurMap" class="map-container"></div>
+                <div class="map-info">
+                    <h3>Beautiful Places to Visit in Jabalpur</h3>
+                    <ul class="tourist-spots">
+                        <li><span class="spot-icon">1</span> Dhuandhar Falls - Spectacular waterfall with misty appearance</li>
+                        <li><span class="spot-icon">2</span> Marble Rocks - Stunning white marble cliffs along Narmada River</li>
+                        <li><span class="spot-icon">3</span> Balancing Rocks - Natural geological wonder</li>
+                        <li><span class="spot-icon">4</span> Rani Durgavati Fort - Historical fort with panoramic views</li>
+                        <li><span class="spot-icon">5</span> Madan Mahal - Ancient fort built on a hilltop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="destination-section">
+            <h2>About Narsinghpur</h2>
+            <p>Narsinghpur is a beautiful district of Madhya Pradesh known for its natural beauty and historical significance. The banks of Narmada River, ancient temples, and natural sites attract tourists here.</p>
+        </div>
+        
+        <div class="destination-section">
+            <h2>About Jabalpur</h2>
+            <p>Jabalpur is a major city in Madhya Pradesh famous for its natural and historical sites. Places like Marble Rocks and Dhuandhar Falls in Bhedaghat are the center of tourist attraction.</p>
+        </div>
+    </div>
+
+    <!-- Google Maps API Script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMaps" async defer></script>
+    
+    <script>
+        // Dropdown Toggle Function
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        
+        // Initialize Google Maps
+        function initMaps() {
+            // Narsinghpur Map
+            const narsinghpurCenter = { lat: 22.9497, lng: 79.1929 }; // Narsinghpur coordinates
+            const narsinghpurMap = new google.maps.Map(document.getElementById("narsinghpurMap"), {
+                zoom: 12,
+                center: narsinghpurCenter,
+            });
+            
+            // Narsinghpur Tourist Spots
+            const narsinghpurSpots = [
+                { name: "Gautam Buddha Temple", location: { lat: 22.9697, lng: 79.1729 }, info: "Religious site with historical significance" },
+                { name: "Barman Ghat", location: { lat: 22.9397, lng: 79.2029 }, info: "Scenic riverbank with religious importance" },
+                { name: "Dudhara Falls", location: { lat: 22.9197, lng: 79.1629 }, info: "Beautiful waterfall surrounded by nature" },
+                { name: "Narmada Riverbank", location: { lat: 22.9597, lng: 79.1829 }, info: "Peaceful spot for relaxation" },
+                { name: "Chausath Yogini Temple", location: { lat: 22.9797, lng: 79.2129 }, info: "Ancient temple with architectural beauty" }
+            ];
+            
+            // Add markers for Narsinghpur spots
+            narsinghpurSpots.forEach((spot, index) => {
+                const marker = new google.maps.Marker({
+                    position: spot.location,
+                    map: narsinghpurMap,
+                    title: spot.name,
+                    label: (index + 1).toString()
+                });
+                
+                const infowindow = new google.maps.InfoWindow({
+                    content: `<strong>${spot.name}</strong><br>${spot.info}`
+                });
+                
+                marker.addListener("click", () => {
+                    infowindow.open(narsinghpurMap, marker);
+                });
+            });
+            
+            // Jabalpur Map
+            const jabalpurCenter = { lat: 23.1815, lng: 79.9864 }; // Jabalpur coordinates
+            const jabalpurMap = new google.maps.Map(document.getElementById("jabalpurMap"), {
+                zoom: 12,
+                center: jabalpurCenter,
+            });
+            
+            // Jabalpur Tourist Spots
+            const jabalpurSpots = [
+                { name: "Dhuandhar Falls", location: { lat: 23.1215, lng: 79.8164 }, info: "Spectacular waterfall with misty appearance" },
+                { name: "Marble Rocks", location: { lat: 23.1315, lng: 79.8064 }, info: "Stunning white marble cliffs along Narmada River" },
+                { name: "Balancing Rocks", location: { lat: 23.2015, lng: 79.9564 }, info: "Natural geological wonder" },
+                { name: "Rani Durgavati Fort", location: { lat: 23.1615, lng: 79.9364 }, info: "Historical fort with panoramic views" },
+                { name: "Madan Mahal", location: { lat: 23.1715, lng: 79.9664 }, info: "Ancient fort built on a hilltop" }
+            ];
+            
+            // Add markers for Jabalpur spots
+            jabalpurSpots.forEach((spot, index) => {
+                const marker = new google.maps.Marker({
+                    position: spot.location,
+                    map: jabalpurMap,
+                    title: spot.name,
+                    label: (index + 1).toString()
+                });
+                
+                const infowindow = new google.maps.InfoWindow({
+                    content: `<strong>${spot.name}</strong><br>${spot.info}`
+                });
+                
+                marker.addListener("click", () => {
+                    infowindow.open(jabalpurMap, marker);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+ZX                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="logstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="loginForm">
+            <h2>Login</h2>
+            <form onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="form-links">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                    <a href="#" onclick="showSignup()">Sign Up</a>
+                </div>
+            </form>
+            <?php
+            $con=mysqli_connect("localhost","root","","travelingdb");
+            
+        </div>
+
+        <div class="form-container hidden" id="forgotForm">
+            <h2>Reset Password</h2>
+            <form onsubmit="return handleForgotPassword(event)">
+                <div class="steps-indicator">
+                    <div class="step active" id="step1">Email</div>
+                    <div class="step" id="step2">Verify</div>
+                    <div class="step" id="step3">Reset</div>
+                </div>
+                
+                <div class="step-content" id="emailStep">
+                    <div class="form-group">
+                        <input type="email" id="resetEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="sendResetCode()">Send Reset Code</button>
+                    </div>
+                </div>
+
+                <div class="step-content hidden" id="verifyStep">
+                    <div class="form-group">
+                        <input type="text" id="resetCode" placeholder="Enter 6-digit code" maxlength="6" required>
+                        <div class="resend-code">
+                            <span id="timer">5:00</span>
+                            <a href="#" onclick="resendCode()" id="resendButton" class="disabled">Resend Code</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="verifyCode()">Verify Code</button>
+                    </div>
+                </div>
+
+                <div class="step-content hidden" id="resetStep">
+                    <div class="form-group">
+                        <input type="password" id="newPassword" placeholder="New Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Reset Password</button>
+                    </div>
+                </div>
+
+                <div class="form-links">
+                    <a href="#" onclick="showLogin()">Back to Login</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container hidden" id="signupForm">
+            <h2>Sign Up</h2>
+            <form onsubmit="return handleSignup(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+                <div class="form-links">
+                    <a href="#" onclick="showLogin()">Already have an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="logscript.js"></script>
+</body>
+</html>

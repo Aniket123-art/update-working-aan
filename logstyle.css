@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #b021b0, #6ded9189);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.163);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #2193b0;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1b7a94;
+}
+
+.form-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-links a {
+    color: #414ce7;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+.steps-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.steps-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.step {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    color: #666;
+    position: relative;
+    z-index: 2;
+}
+
+.step.active {
+    border-color: #2193b0;
+    color: #2193b0;
+}
+
+.step-content.hidden {
+    display: none;
+}
+
+.resend-code {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.resend-code a.disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+#timer {
+    color: #666;
+}
+
+#resetCode {
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 18px;
+}
